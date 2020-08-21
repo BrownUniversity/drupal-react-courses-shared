@@ -1,7 +1,8 @@
 {
   "name": "drupal-react-courses-shared",
   "description": "Common code for listing courses in particular subjects or concentrations",
-  "version": "0.1.0",
+  "author": "Emily Kasbohm <emily_kasbohm@brown.edu",
+  "version": "0.2.0",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/drupal-react-courses-shared.esm.js",

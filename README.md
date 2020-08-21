@@ -10,10 +10,10 @@ Common code for showing courses in a given [subject(s)](https://bitbucket.brown.
 
 ```sh
 // npm
-npm i git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#semver:^0.1
+npm i git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#semver:^0.2
 
 // yarn
-yarn add git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#^0.1
+yarn add git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#^0.2
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
@@ -22,9 +22,14 @@ _Ensure you're on the network and that your SSH key has been added to the ssh-ag
 
 These libraries are not bundled with Drupal React Bill Estimator Shared and are required at runtime:
 
+- [**@apollo/client**](https://www.npmjs.com/package/@apollo/client)
+- [**brown-university-components**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-components)
 - [**brown-university-styles**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-styles)
+- [**moment**](https://www.npmjs.com/package/moment)
 - [**react**](https://www.npmjs.com/package/react)
+- [**react-router-dom**](https://www.npmjs.com/package/react-router-dom)
 - [**styled-components**](https://www.npmjs.com/package/styled-components)
+- [**@testing-library/react**](https://www.npmjs.com/package/@testing-library/react)
 
 ### 2. Import styles from Brown University Styles
 
