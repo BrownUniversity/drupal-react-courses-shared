@@ -1,6 +1,2 @@
-import * as React from "react";
-
-// Delete me
-export const Thing = () => {
-  return <div>Thing</div>;
-};
+export { default as Loader } from "./components/Loader";
+export { default as Wrapper } from "./components/Wrapper";
