@@ -7,6 +7,7 @@ Common code for showing courses in a given [subject(s)](https://bitbucket.brown.
 ## Usage
 
 1. Install packages
+
 ```sh
 // npm
 npm i git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#semver:^0.1
@@ -17,7 +18,7 @@ yarn add git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
 
-#### Required Peer Dependencies
+### Required Peer Dependencies
 
 These libraries are not bundled with Drupal React Bill Estimator Shared and are required at runtime:
 
@@ -31,13 +32,13 @@ These libraries are not bundled with Drupal React Bill Estimator Shared and are 
 
 ## Development
 
-### Install dependencies:
+### Install dependencies
 
 ```sh
 npm install
 ```
 
-### Recommended workflow:
+### Recommended workflow
 
 Run TSDX in one terminal:
 
@@ -55,13 +56,13 @@ npm install
 npm start
 ```
 
-### Lint:
+### Lint
 
-```
+```sh
 npm run lint
 ```
 
-### Test:
+### Test
 
 ```sh
 npm test
@@ -86,4 +87,3 @@ To publish a new version, do the following:
 ## Boilerplate
 
 This project was bootstraped with [TSDX](https://github.com/jaredpalmer/tsdx).
-
