@@ -2,7 +2,11 @@ import React, { ReactNode, useState } from "react";
 
 export const SelectedSectionContext = React.createContext({});
 
-const SectionContextWrapper = ({ children }: { children: ReactNode }) => {
+export const SelectedSectionProvider = ({
+  children
+}: {
+  children: ReactNode;
+}) => {
   const [selectedSection, setSelectedSection] = useState(null);
 
   return (
@@ -13,5 +17,3 @@ const SectionContextWrapper = ({ children }: { children: ReactNode }) => {
     </SelectedSectionContext.Provider>
   );
 };
-
-export default SectionContextWrapper;
