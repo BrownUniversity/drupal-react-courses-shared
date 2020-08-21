@@ -2,7 +2,7 @@
 import React, { ReactElement, ReactNode } from "react";
 import { MemoryRouter, Route, RouteComponentProps } from "react-router-dom";
 import { render } from "@testing-library/react";
-import SectionContextWrapper from "../../src/contexts/SelectedSectionContext";
+import { SelectedSectionProvider } from "../../src/contexts/SelectedSectionContext";
 
 const renderWithRouter = (ui: ReactElement, { route = "/" } = {}) => {
   let testHistory: RouteComponentProps["history"] = {
@@ -28,7 +28,7 @@ const renderWithRouter = (ui: ReactElement, { route = "/" } = {}) => {
           return null;
         }}
       />
-      <SectionContextWrapper>{children}</SectionContextWrapper>
+      <SelectedSectionProvider>{children}</SelectedSectionProvider>
     </MemoryRouter>
   );
 

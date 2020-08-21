@@ -12,6 +12,26 @@ var React__default = _interopDefault(React);
 var reactRouterDom = require('react-router-dom');
 require('react-dom');
 var moment = _interopDefault(require('moment'));
+var client = require('@apollo/client');
+var react = require('@testing-library/react');
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 function _taggedTemplateLiteralLoose(strings, raw) {
   if (!raw) {
@@ -166,9 +186,116 @@ var MeetingDetails = function MeetingDetails(_ref) {
   });
 };
 
+var SelectedSectionContext = /*#__PURE__*/React__default.createContext({});
+var SelectedSectionProvider = function SelectedSectionProvider(_ref) {
+  var children = _ref.children;
+
+  var _useState = React.useState(null),
+      selectedSection = _useState[0],
+      setSelectedSection = _useState[1];
+
+  return React__default.createElement(SelectedSectionContext.Provider, {
+    value: {
+      selectedSection: selectedSection,
+      setSelectedSection: setSelectedSection
+    }
+  }, children);
+};
+
 var URLS = {
   qa: "https://webservices-proxy.cis-qas.brown.edu",
   prod: "https://webservices-proxy.brown.edu"
+};
+
+function _templateObject$2() {
+  var data = _taggedTemplateLiteralLoose(["\n  {\n    terms {\n      code\n      description\n    }\n  }\n"]);
+
+  _templateObject$2 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var termsQuery = /*#__PURE__*/client.gql( /*#__PURE__*/_templateObject$2());
+
+var makeMeeting = function makeMeeting(subset) {
+  if (subset === void 0) {
+    subset = {};
+  }
+
+  return _extends({
+    buildingCode: "CIT",
+    buildingDescription: "Center for Information Technology",
+    daysToMeet: "MWF",
+    endDate: "2019-05-07",
+    endTime: "10:50",
+    roomCode: "368",
+    startDate: "2019-01-23",
+    startTime: "10:00"
+  }, subset);
+};
+
+var makeMeetings = function makeMeetings(subset, numMeetings) {
+  if (subset === void 0) {
+    subset = {};
+  }
+
+  if (numMeetings === void 0) {
+    numMeetings = 1;
+  }
+
+  var meetings = [];
+
+  for (var i = 0; i < numMeetings; i += 1) {
+    meetings.push(makeMeeting(subset));
+  }
+
+  return meetings;
+};
+
+var renderWithRouter = function renderWithRouter(ui, _temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$route = _ref.route,
+      route = _ref$route === void 0 ? "/" : _ref$route;
+
+  var testHistory = {
+    location: {
+      pathname: "",
+      search: "",
+      state: "",
+      hash: ""
+    },
+    length: 0,
+    push: jest.fn(),
+    action: "PUSH",
+    replace: jest.fn(),
+    go: jest.fn(),
+    goBack: jest.fn(),
+    goForward: jest.fn(),
+    block: jest.fn(),
+    listen: jest.fn(),
+    createHref: jest.fn()
+  };
+
+  var Wrapper = function Wrapper(_ref2) {
+    var children = _ref2.children;
+    return React__default.createElement(reactRouterDom.MemoryRouter, {
+      initialEntries: [route]
+    }, React__default.createElement(reactRouterDom.Route, {
+      path: "*",
+      render: function render(_ref3) {
+        var history = _ref3.history;
+        testHistory = history;
+        return null;
+      }
+    }), React__default.createElement(SelectedSectionProvider, null, children));
+  };
+
+  return _extends({}, react.render(ui, {
+    wrapper: Wrapper
+  }), {
+    history: testHistory
+  });
 };
 
 exports.CourseField = CourseField;
@@ -176,6 +303,12 @@ exports.Filter = Filter;
 exports.FilterWrapper = FilterWrapper;
 exports.Loader = Loader;
 exports.MeetingDetails = MeetingDetails;
+exports.SelectedSectionContext = SelectedSectionContext;
+exports.SelectedSectionProvider = SelectedSectionProvider;
 exports.URLS = URLS;
 exports.Wrapper = Wrapper;
+exports.makeMeeting = makeMeeting;
+exports.makeMeetings = makeMeetings;
+exports.renderWithRouter = renderWithRouter;
+exports.termsQuery = termsQuery;
 //# sourceMappingURL=drupal-react-courses-shared.cjs.development.js.map
