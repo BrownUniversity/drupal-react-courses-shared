@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { NavLink, MemoryRouter, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag';
 import { render } from '@testing-library/react';
 
 function _extends() {

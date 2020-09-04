@@ -1,2 +1,2 @@
-declare const termsQuery: any;
+declare const termsQuery: import("graphql").DocumentNode;
 export default termsQuery;

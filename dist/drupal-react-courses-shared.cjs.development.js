@@ -12,7 +12,7 @@ var React__default = _interopDefault(React);
 var reactRouterDom = require('react-router-dom');
 require('react-dom');
 var moment = _interopDefault(require('moment'));
-var client = require('@apollo/client');
+var gql = _interopDefault(require('graphql-tag'));
 var react = require('@testing-library/react');
 
 function _extends() {
@@ -216,7 +216,7 @@ function _templateObject$2() {
 
   return data;
 }
-var termsQuery = /*#__PURE__*/client.gql( /*#__PURE__*/_templateObject$2());
+var termsQuery = /*#__PURE__*/gql( /*#__PURE__*/_templateObject$2());
 
 var makeMeeting = function makeMeeting(subset) {
   if (subset === void 0) {

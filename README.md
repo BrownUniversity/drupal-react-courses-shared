@@ -1,6 +1,6 @@
 # Drupal React Bill Estimator Shared
 
-Common code for showing courses in a given [subject(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-courses/browse) or [concentration(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-concentration-courses/browse).
+Common code for showing courses in a given [subject(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-courses/browse) or [concentration(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-concentration-courses/browse), or with [specific crn(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-specific-courses/browse).
 
 ---
 
@@ -22,9 +22,10 @@ _Ensure you're on the network and that your SSH key has been added to the ssh-ag
 
 These libraries are not bundled with Drupal React Bill Estimator Shared and are required at runtime:
 
-- [**@apollo/client**](https://www.npmjs.com/package/@apollo/client)
 - [**brown-university-components**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-components)
 - [**brown-university-styles**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-styles)
+- [**graphql**](https://www.npmjs.com/package/graphql)
+- [**graphql-tag**](https://www.npmjs.com/package/graphql-tag)
 - [**moment**](https://www.npmjs.com/package/moment)
 - [**react**](https://www.npmjs.com/package/react)
 - [**react-router-dom**](https://www.npmjs.com/package/react-router-dom)
