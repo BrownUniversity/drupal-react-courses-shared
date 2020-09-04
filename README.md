@@ -1,4 +1,4 @@
-# Drupal React Bill Estimator Shared
+# Drupal React Courses Shared
 
 Common code for showing courses in a given [subject(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-courses/browse) or [concentration(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-concentration-courses/browse), or with [specific crn(s)](https://bitbucket.brown.edu/projects/DREACT/repos/drupal-react-specific-courses/browse).
 
