@@ -10,20 +10,18 @@ Common code for showing courses in a given [subject(s)](https://bitbucket.brown.
 
 ```sh
 // npm
-npm i git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#semver:^0.3
+npm i git@github.com:BrownUniversity/drupal-react-courses-shared.git
 
 // yarn
-yarn add git+https://bitbucket.brown.edu/scm/dreact/drupal-react-courses-shared.git#^0.3
+yarn add git@github.com:BrownUniversity/drupal-react-courses-shared.git
 ```
-
-_Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
 
 ### Required Peer Dependencies
 
 These libraries are not bundled with Drupal React Bill Estimator Shared and are required at runtime:
 
-- [**brown-university-components**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-components)
-- [**brown-university-styles**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-styles)
+- [**brown-university-components**](https://github.com/BrownUniversity/brown-university-components/)
+- [**brown-university-styles**](https://github.com/BrownUniversity/brown-university-styles/)
 - [**graphql**](https://www.npmjs.com/package/graphql)
 - [**graphql-tag**](https://www.npmjs.com/package/graphql-tag)
 - [**moment**](https://www.npmjs.com/package/moment)

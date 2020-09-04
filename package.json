@@ -1,6 +1,6 @@
 {
   "name": "drupal-react-courses-shared",
-  "description": "Common code for listing courses in particular subjects or concentrations",
+  "description": "Common code for listing courses",
   "author": "Emily Kasbohm <emily_kasbohm@brown.edu",
   "version": "0.3.0",
   "private": true,
@@ -17,8 +17,8 @@
     "build": "tsdx build"
   },
   "peerDependencies": {
-    "brown-university-components": "git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#semver:^1.7",
-    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.12",
+    "brown-university-components": "github:BrownUniversity/brown-university-components",
+    "brown-university-styles": "github:BrownUniversity/brown-university-styles",
     "moment": "^2.27.0",
     "react": "^16.0.0",
     "react-dom": "^16.13.1",
@@ -34,8 +34,8 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.3",
-    "brown-university-components": "git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#semver:^1.7",
-    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.12",
+    "brown-university-components": "github:BrownUniversity/brown-university-components",
+    "brown-university-styles": "github:BrownUniversity/brown-university-styles",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
     "husky": "^4.2.5",
