@@ -38,7 +38,7 @@
     "brown-university-styles": "github:BrownUniversity/brown-university-styles",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
