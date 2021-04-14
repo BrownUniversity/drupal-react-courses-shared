@@ -35,27 +35,11 @@ function _taggedTemplateLiteralLoose(strings, raw) {
   return strings;
 }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  text-align: center;\n\n  #cover {\n    stroke: ", ";\n  }\n"]);
+var _templateObject;
+var Loader = /*#__PURE__*/styled(Loader$1)(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  text-align: center;\n\n  #cover {\n    stroke: ", ";\n  }\n"])), colors.white);
 
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var Loader = /*#__PURE__*/styled(Loader$1)( /*#__PURE__*/_templateObject(), colors.white);
-
-function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n  animation: 750ms ease fadeInUp;\n\n  @keyframes fadeInUp {\n    0% {\n      opacity: 0;\n      transform: translateY(0.75rem);\n    }\n    100% {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n"]);
-
-  _templateObject$1 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var Wrapper = /*#__PURE__*/styled.div( /*#__PURE__*/_templateObject$1());
+var _templateObject$1;
+var Wrapper = /*#__PURE__*/styled.div(_templateObject$1 || (_templateObject$1 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  animation: 750ms ease fadeInUp;\n\n  @keyframes fadeInUp {\n    0% {\n      opacity: 0;\n      transform: translateY(0.75rem);\n    }\n    100% {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n"])));
 
 var CourseField = function CourseField(_ref) {
   var label = _ref.label,
@@ -200,16 +184,8 @@ var URLS = {
   prod: "https://webservices-proxy.brown.edu"
 };
 
-function _templateObject$2() {
-  var data = _taggedTemplateLiteralLoose(["\n  {\n    terms {\n      code\n      description\n    }\n  }\n"]);
-
-  _templateObject$2 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var termsQuery = /*#__PURE__*/gql( /*#__PURE__*/_templateObject$2());
+var _templateObject$2;
+var termsQuery = /*#__PURE__*/gql(_templateObject$2 || (_templateObject$2 = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  {\n    terms {\n      code\n      description\n    }\n  }\n"])));
 
 var makeMeeting = function makeMeeting(subset) {
   if (subset === void 0) {
